@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoDoPizza</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <!-- pizza modal window  -->
+      <div class="pizza-modal-window" onclick="event.stopPropagation()">
+        <!-- для псевдоэлемента закрытия -->
+        <span class="close"></span>
+        <div class="ellipse">
+          <img
+            src="./img/pizza-modal-window/pizza-modal.png"
+            alt="pizza modal window"
+          />
+        </div>
+        <div class="chioce-pizza">
+          <h2>Чиззи чеддер</h2>
+          <p>30 см, традиционное тесто, 480 г</p>
+          <div>
+            <span>Ветчина, </span>
+            <span>сыр чеддер, </span>
+            <span>сладкий перец, </span>
+            <span>моцарелла, </span>
+            <span>томатный соус, </span>
+            <span>чеснок, </span>
+            <span>итальянские травы</span>
+          </div>
+
+          <div class="size-pizza custom-radio">
+            <label for="mini">
+              <input type="radio" id="mini" name="size" value="mini" />
+              <span>Маленькая</span>
+            </label>
+
+            <label for="mid">
+              <input type="radio" id="mid" name="size" value="mid" checked />
+              <span>Средняя</span>
+            </label>
+
+            <label for="big">
+              <input type="radio" id="big" name="size" value="big" />
+              <span>Большая</span>
+            </label>
+          </div>
+          <div class="dough-pizza custom-radio">
+            <label for="tradit">
+              <input
+                type="radio"
+                id="tradit"
+                name="dough"
+                value="tradit"
+                checked
+              />
+              <span>Традиционное</span>
+            </label>
+            <label for="thin">
+              <input type="radio" id="thin" name="dough" value="thin" />
+              <span>Тонкое</span>
+            </label>
+          </div>
+          <h3>Добавить в пиццу</h3>
+          <div class="choice-pizza__grid">
+            <div class="choice-pizza__grid__elem custom-check">
+              <label for="bortik">
+                <input
+                  type="checkbox"
+                  id="bortik"
+                  name="bortik"
+                  value="bortik"
+                />
+                <div>
+                  <img
+                    src="./img/pizza-modal-window/bortik.png"
+                    alt="сырный бортик"
+                  />
+                  <p>Сырный бортик</p>
+                  <p>599 &#8381;</p>
+                </div>
+              </label>
+            </div>
+            <div class="choice-pizza__grid__elem custom-check">
+              <label for="shamps">
+                <input
+                  type="checkbox"
+                  id="shamps"
+                  name="shamps"
+                  value="shamps"
+                />
+                <div>
+                  <img
+                    src="./img/pizza-modal-window/shamps.png"
+                    alt="шампиньоны"
+                  />
+                  <p>Шампиньоны</p>
+                  <p>39 &#8381;</p>
+                </div>
+              </label>
+            </div>
+            <div class="choice-pizza__grid__elem custom-check">
+              <label for="chikken">
+                <input
+                  type="checkbox"
+                  id="chikken"
+                  name="chikken"
+                  value="chikken"
+                />
+                <div>
+                  <img
+                    src="./img/pizza-modal-window/chikken.png"
+                    alt="цыпленок"
+                  />
+                  <p>Цыплёнок</p>
+                  <p>59 &#8381;</p>
+                </div>
+              </label>
+            </div>
+            <div class="choice-pizza__grid__elem custom-check">
+              <label for="brynza">
+                <input
+                  type="checkbox"
+                  id="brynza"
+                  name="brynza"
+                  value="brynza"
+                />
+                <div>
+                  <img src="./img/pizza-modal-window/brynza.png" alt="брынза" />
+                  <p>Брынза</p>
+                  <p>59 &#8381;</p>
+                </div>
+              </label>
+            </div>
+            <div class="choice-pizza__grid__elem custom-check">
+              <label for="holopeni">
+                <input
+                  type="checkbox"
+                  id="holopeni"
+                  name="holopeni"
+                  value="holopeni"
+                />
+                <div>
+                  <img
+                    src="./img/pizza-modal-window/holopeni.png"
+                    alt="халапенью"
+                  />
+                  <p>Острый халапеньо</p>
+                  <p>39 &#8381;</p>
+                </div>
+              </label>
+            </div>
+            <div class="choice-pizza__grid__elem custom-check">
+              <label for="chili">
+                <input type="checkbox" id="chili" name="chili" value="chili" />
+                <div>
+                  <img
+                    src="./img/pizza-modal-window/chili.png"
+                    alt="острый цыпленок"
+                  />
+                  <p>Острый цыпленок</p>
+                  <p>59 &#8381;</p>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="button_orange">
+            <button>Добавить в корзину за 625 &#8381;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- обёрка шириной 1280px для корректного отображения слайдера -->
+    <div class="wrapper">
+      <!-- header -->
+      <header>
+        <!-- основной контейнер для контента шириной 1060px -->
+        <div class="container">
+          <!-- header -->
+          <div id="head" class="header">
+            <div class="header__elem">
+              <div class="header__logo">
+                <img id="logo" src="./img/header/logo.svg" alt="logo" />
+                <img src="./img/header/logo-text.svg" alt="logo-text" />
+                <p class="logo__text">Сеть пиццерий №1 в России</p>
+              </div>
+              <div class="phone">
+                <a href="tel:+78003020060">8 800 302-00-60</a>
+                <p>Звонок бесплатный</p>
+              </div>
+            </div>
+            <div id="header_sticky" class="header__elem">
+              <nav class="header__menu">
+                <a href="#head"
+                  ><img
+                    id="header_sticky_logo"
+                    src="./img/header/logo.svg"
+                    alt=""
+                /></a>
+                <ul>
+                  <li><a href="#pizza">Пицца</a></li>
+                  <li><a href="#combo">Комбо</a></li>
+                  <li><a href="#snacks">Закуски</a></li>
+                  <li><a href="#sweets">Десерты</a></li>
+                  <li><a href="#drink">Напитки</a></li>
+                  <li><a href="#">Другие товары</a></li>
+                </ul>
+              </nav>
+              <div class="button_orange">
+                <button class="openModal">Корзина</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- slider -->
+      <article>
+        <div class="slider">
+          <img src="./img/slider/left.png" alt="left slide" />
+          <div class="container">
+            <img src="./img/slider/sld_corr.png" alt="slide one" />
+          </div>
+          <img src="./img/slider/right.png" alt="fight slide" />
+        </div>
+      </article>
+      <main>
+        <!-- new and popular -->
+        <section class="new">
+          <div class="container">
+            <h2>Новое и популярное</h2>
+            <div class="popular">
+              <div class="popular__item">
+                <img src="./img/popular/cezar.png" alt="цезарь" />
+                <p class="popular__pizza">Цезарь</p>
+                <p class="popular__price price">от 445 &#8381;</p>
+              </div>
+              <div class="popular__item">
+                <img src="./img/popular/losos.png" alt="нежный лосось" />
+                <p class="popular__pizza">Нежный лосось</p>
+                <p class="popular__price price">от 495 &#8381;</p>
+              </div>
+              <div class="popular__item">
+                <img src="./img/popular/two-pizza.png" alt="2 пиццы" />
+                <p class="popular__pizza">2 пиццы</p>
+                <p class="popular__price price">899 &#8381;</p>
+              </div>
+              <div class="popular__item">
+                <img src="./img/popular/karbon.png" alt="карбонара" />
+                <p class="popular__pizza">Карбонара</p>
+                <p class="popular__price price">от 395 &#8381;</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- pizza -->
+        <section id="pizza" class="pizza">
+          <div class="container">
+            <h2>Пицца</h2>
+            <!-- контейнер для grid элементов -->
+            <div class="grid__container">
+              <div class="grid__elem">
+                <img
+                  src="./img/pizza/halfs-pizza.png"
+                  alt="пицца из половинок"
+                />
+                <h3>Пицца из половинок</h3>
+                <p>Соберите свою пиццу 35см с двумя разными вкусами</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 600 &#8381;</p>
+                  <div class="button_orange js-modalButton">
+                    <button>Собрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/pizza/heart-pizza.png" alt="пепперони пицца" />
+                <h3>Пепперони пицца</h3>
+                <p>Пикантная пепперони, моцарелла, томатный соус</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 625 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/pizza/heart-pie.png" alt="пирог-сердце" />
+                <h3>Пирог-сердце</h3>
+                <p>Ананасы, брусника, сгущенное молоко</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 625 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/pizza/chedder.png" alt="чиззи чеддер" />
+                <h3>Чиззи чеддер</h3>
+                <p>
+                  Ветчина, сыр чеддер, сладкий перец, моцарелла, томатный соус,
+                  чеснок, итальянские травы
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 625 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img
+                  src="./img/pizza/blue-chikken.png"
+                  alt="цыпленок блю чиз"
+                />
+                <h3>Цыпленок блю чиз</h3>
+                <p>Цыпленок, сыр блю чиз, томаты, моцарелла, соус альфредо</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 445 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/pizza/salmon.png" alt="Нежный лосось" />
+                <h3>Нежный лосось</h3>
+                <p>
+                  Лосось, томаты черри, соус песто, моцарелла, соус альфредо
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 495 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/pizza/cheezzy.png" alt="сырная" />
+                <h3>Сырная</h3>
+                <p>
+                  Увеличенная порция моцареллы, сыры чеддер и пармезан, соус
+                  альфредо
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 245 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/pizza/pepperoni.png" alt="пепперони" />
+                <h3>Пепперони фреш</h3>
+                <p>
+                  Пикантная пепперони, увеличенная порция моцареллы, томаты,
+                  томатный соус
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">от 245 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>Выбрать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- kombo -->
+        <section id="combo" class="combo">
+          <div class="container">
+            <h2>Комбо</h2>
+            <div class="grid__container">
+              <div class="grid__elem">
+                <img src="./img/combo/two-pizza.png" alt="комбо за 599" />
+                <h3>Комбо за 599 &#8381;</h3>
+                <p>
+                  Наш хит "Аррива!" или другая пицца 25см, Додстер, напиток и
+                  соус.
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">599 &#8381;</p>
+                  <div class="button_orange js-modalButton">
+                    <button>Собрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/combo/two-pizza.png" alt="2 пиццы" />
+                <h3>2 пиццы</h3>
+                <p>Самое популярное комбо из 2 пицц 30 см. Большой выбор</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">899 &#8381;</p>
+                  <div class="button_orange js-modalButton">
+                    <button>Собрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/combo/two-pizza.png" alt="2 пиццы и закуска" />
+                <h3>2 пиццы и закуска</h3>
+                <p>
+                  2 пиццы 25 см и закуска на выбор. Для компании из 2–4 человек
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">799 &#8381;</p>
+                  <div class="button_orange js-modalButton">
+                    <button>Собрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/combo/two-pizza.png" alt="пицца и 2 закуски" />
+                <h3>Пицца и 2 закуски</h3>
+                <p>
+                  Пицца 30 см и 2 закуски на выбор. Для компании из 2–4 человек
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">799 &#8381;</p>
+                  <div class="button_orange js-modalButton">
+                    <button>Собрать</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/combo/combo.png" alt="комбо за 999" />
+                <h3>Комбо за 999 &#8381;</h3>
+                <p>
+                  3 пиццы 30 см на тонком тесте по суперцене. Выбор пицц
+                  ограничен
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">999 &#8381;</p>
+                  <div class="button_orange js-modalButton">
+                    <button>Собрать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- snacks -->
+        <section id="snacks" class="snacks">
+          <div class="container">
+            <h2>Закуски</h2>
+            <div class="grid__container">
+              <div class="grid__elem">
+                <img
+                  src="./img/snacks/soup.png"
+                  alt="томатный суп с гренками"
+                />
+                <h3>Томатный суп с гренками</h3>
+                <p>
+                  Горячий суп с пшеничными гренками на основе фирменного соуса
+                  из итальянских томатов
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">99 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img
+                  src="./img/snacks/soup.png"
+                  alt="томатный суп с митболами"
+                />
+                <h3>Томатный суп с митболами</h3>
+                <p>
+                  Горячий суп c митболами из говядины и маслинами на основе
+                  фирменного соуса из итальянских томатов
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">149 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/snacks/dodster.png" alt="додстер" />
+                <h3>Додстер</h3>
+                <p>
+                  Легендарная горячая закуска с цыпленком, томатами, моцареллой,
+                  соусом ранч в тонкой пшеничной лепешке
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img
+                  src="./img/snacks/spise-dodster.png"
+                  alt="острый додстер"
+                />
+                <h3>Острый додстер</h3>
+                <p>
+                  Горячая закуска с острым цыпленком, перцем халапеньо, солеными
+                  огурчиками, томатами, моцареллой и соусом барбекю в тонкой
+                  пшеничной лепешке
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img
+                  src="./img/snacks/chipotle-dodster.png"
+                  alt="додстер Чипотле"
+                />
+                <h3>Додстер Чипотле</h3>
+                <p>
+                  Горячая закуска с пикантным соусом чипотле из копченых
+                  перчиков, цыпленком, томатами, моцареллой в тонкой пшеничной
+                  лепешке
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- sweets -->
+        <section id="sweets" class="sweets">
+          <div class="container">
+            <h2>Десерты</h2>
+            <div class="grid__container">
+              <div class="grid__elem">
+                <img src="./img/sweets/apple-pie.png" alt="яблочный пирог" />
+                <h3>Яблочный пирог</h3>
+                <p>
+                  Десерт из песочного теста с яблочной начинкой. Может содержать
+                  изюм
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">99 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/sweets/new-york.png" alt="чизкейк Нью-Йорк" />
+                <h3>Чизкейк Нью-Йорк</h3>
+                <p>Классический американский творожный десерт</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">149 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/sweets/muale.png" alt="фонданы" />
+                <h3>Фонданы, 2 шт</h3>
+                <p>
+                  Два десерта с хрустящей корочкой и топлёной шоколадной
+                  начинкой
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/sweets/oreo.png" alt="орео" />
+                <h3>Молочный коктейль с печеньем Орео</h3>
+                <p>
+                  Напиток из молока и мороженого с добавлением дробленого
+                  печенья «Орео»
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/sweets/milk.png" alt="милкшейк" />
+                <h3>Классический молочный коктейль</h3>
+                <p>Напиток из молока и мороженого</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- drinking -->
+        <section id="drink" class="drinking">
+          <div class="container">
+            <h2>Напитки</h2>
+            <div class="grid__container">
+              <div class="grid__elem">
+                <img src="./img/drinkin/two-colas.png" alt="2 колы" />
+                <h3>2 Cola-cola по суперцене</h3>
+                <p>
+                  Две классические Coca-Cola по 0,5 литров по выгодной цене, 0,5
+                  л
+                </p>
+                <div class="grid__elem_bottom">
+                  <p class="price">99 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/drinkin/cola-orange.png" alt="кола оранж" />
+                <h3>Coca-Cola Orange</h3>
+                <p>0,5 л</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">149 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/drinkin/cola-ziro.png" alt="зиро" />
+                <h3>Coca-Cola Zero</h3>
+                <p>0,5 л</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/drinkin/cola.png" alt="cola" />
+                <h3>Coca-Cola</h3>
+                <p>0,5 л</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <img
+                      id="button_dynamic"
+                      src="./img/drinkin/button.png"
+                      alt="батон"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="grid__elem">
+                <img src="./img/drinkin/cola-vanilla.png" alt="vanilla" />
+                <h3>Coca-Cola Vanilla</h3>
+                <p>0,5 л</p>
+                <div class="grid__elem_bottom">
+                  <p class="price">159 &#8381;</p>
+                  <div class="button_gray js-modalButton">
+                    <button>В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <!-- контент до горизонтальной линии -->
+        <div class="footer_top">
+          <!-- левая верхняя часть -->
+          <div class="footer_top_left">
+            <!-- чать с навигацией -->
+            <div class="footer__menu">
+              <!-- основной список -->
+              <ul class="footer__list_primary">
+                <li>
+                  <!-- списки Додо Пицца -->
+                  <ul>
+                    <li><a href="#">Додо Пицца</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Додо-книга</a></li>
+                    <li><a href="#">Блог "Сила ума"</a></li>
+                    <li><a href="#">Додо ИС</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <!-- списки Работа -->
+                  <ul>
+                    <li><a href="#">Работа</a></li>
+                    <li><a href="#">В пиццерии</a></li>
+                    <li><a href="#">В контакт-центре</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <!-- списки Партнерам -->
+                  <ul>
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">Франшиза</a></li>
+                    <li><a href="#">Инвестиции</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                    <li><a href="#">Предложить помещение</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <!-- списки Это интересно -->
+                  <ul>
+                    <li><a href="#">Это интересно</a></li>
+                    <li><a href="#">Экскурсии и мастер-классы</a></li>
+                    <li><a href="#">Корпоративные заказы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- часть с цифрами -->
+            <div class="footer__numbers">
+              <div class="footer__sum">
+                <h2 class="footer__text_bold">1 396 362 874 &#8381;</h2>
+                <p class="footer__text_semi-op">
+                  Выручка российской сети в этом месяце. В прошлом — 2 460 305
+                  416 &#8381;
+                </p>
+              </div>
+              <div class="footer__local">
+                <h2 class="footer__text_bold">688 пиццерий</h2>
+                <p class="footer__text_semi-op">
+                  в 14 странах, включая Китай, США и Великобританию
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- правая верхняя часть -->
+          <div class="footer_top_right">
+            <div>
+              <img src="./img/footer/google-play.svg" alt="google play" />
+              <img src="./img/footer/app-store.svg" alt="app store" />
+            </div>
+            <div class="footer__phone">
+              <a href="tel:+78003020060">8 800 302-00-60</a>
+            </div>
+            <p>Звонок бесплатный</p>
+            <a id="footer__email" href="mailto:feedback@dodopizza.com"
+              >feedback@dodopizza.com</a
+            >
+          </div>
+        </div>
+        <!-- контент после горизонтальной -->
+        <div class="footer_bot">
+          <div class="footer__logo">
+            <img src="./img/footer/footer-logo.svg" alt="dodo pizza" />
+          </div>
+          <div class="footer__links">
+            <ul>
+              <li><a href="#">Правовая информация</a></li>
+              <li><a href="#">Калорийность и состав</a></li>
+              <li><a href="#">Помощь</a></li>
+            </ul>
+          </div>
+          <div class="footer__social-icons">
+            <img src="./img/footer/social.svg" alt="social networks" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/scrollNav.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

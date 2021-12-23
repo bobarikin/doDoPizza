@@ -1,0 +1,208 @@
+.pizza-modal-window {
+  width: 920px;
+  height: 610px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 6px 55px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+}
+
+.close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  
+  opacity: 0.7;
+  transition: 0.3s;
+  right: -44px;
+  top: 20px;
+}
+
+.close:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.close::before {
+  transform: rotate(45deg);
+}
+
+.close::after {
+  transform: rotate(-45deg);
+}
+
+.ellipse {
+  width: 540px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chioce-pizza {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 380px;
+  padding: 30px;
+  background-color: #fcfcfc;
+  border-radius: 0 20px 20px 0;
+}
+
+.chioce-pizza h2 {
+  font: 600 24px/33px var(--font-text);
+  color: #000;
+  margin-bottom: 3px;
+}
+
+.chioce-pizza h3 {
+  font: 600 16px/22px var(--font-text);
+  color: #000;
+  padding: 17px 0 11px;
+}
+
+.chioce-pizza p {
+  font: 400 14px/19px var(--font-text);
+  color: #73798c;
+  margin-bottom: 11px;
+}
+
+.chioce-pizza span {
+  font: 400 13px/15px "Arial";
+  color: #4d4d4d;
+}
+
+.chioce-pizza button {
+  width: 320px;
+}
+
+/* кастомизация радио батонов */
+
+.custom-radio {
+  margin: 20px 0 10px;
+  width: 320px;
+  height: 32px;
+  background-color: #f3f3f7;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-radio > label {
+  display: block;
+  height: 100%;
+}
+
+.custom-radio > label > span {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.size-pizza > label {
+  width: 33%;
+}
+
+.dough-pizza > label {
+  width: 50%;
+}
+
+.custom-radio > label > input[type="radio"] {
+  display: none;
+}
+
+.custom-radio > label > span {
+  cursor: pointer;
+  font: 400 12px/16px var(--font-text);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.custom-radio > label > input:checked + span {
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(6, 5, 50, 0.05);
+  border-radius: 100px;
+  color: #000;
+}
+
+/* кастомизация чекбоксов */
+
+.custom-check > label {
+  display: block;
+  height: 100%;
+}
+
+.custom-check > label > input:checked + div {
+  outline: 1px solid #ed5d08;
+  border-radius: 12px;
+}
+
+.custom-check > label > input[type="checkbox"] {
+  display: none;
+}
+
+.custom-check > label > div {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* grid сетка */
+.choice-pizza__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-flow: row;
+  overflow-y: scroll;
+  height: auto;
+  width: 320px;
+  gap: 10px;
+  padding: 1px;
+}
+
+.choice-pizza__grid__elem {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(6, 5, 50, 0.05);
+  border-radius: 12px;
+}
+
+.choice-pizza__grid__elem:hover {
+  outline: 1px solid silver;
+}
+
+.choice-pizza__grid__elem > label > div > p {
+  font: 400 12px/16px var(--font-text);
+  color: #000;
+  text-align: center;
+}
+
+.choice-pizza__grid__elem label > div >:last-child {
+  font: 600 14px/19px var(--font-text);
+}
+
+.choice-pizza__grid::-webkit-scrollbar {
+  width: 0;
+}
+
+.popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.55);
+}

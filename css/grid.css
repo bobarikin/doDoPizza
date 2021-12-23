@@ -1,0 +1,36 @@
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-auto-flow: row;
+    grid-gap: 60px 20px;
+    margin: 40px 0 70px;
+}
+
+.grid__elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid__elem img {
+    margin: 0 auto;
+}
+
+.grid__elem h3 {
+    margin: 5px 0 10px;
+    font: 500 20px/27px var(--font-text);
+    color: var(--font-text);
+}
+
+.grid__elem > p {
+    font: 400 14px/19px var(--font-text);
+    color: #73798C;
+    margin-bottom: 30px;
+}
+
+.grid__elem_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+}

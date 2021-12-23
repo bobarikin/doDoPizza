@@ -1,0 +1,40 @@
+.new {
+  padding: 70px 0;
+}
+
+.popular {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.popular__item {
+  width: 250px;
+  height: 104px;
+  box-shadow: 0px 6px 25px rgba(6, 5, 50, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popular__item:hover {
+    box-shadow: 0px 0px 15px rgba(6, 5, 50, 0.25);
+    transition: 0.3s;
+}
+
+.popular__item > img {
+  float: left;
+  margin: 14px 22px 14px 18px;
+}
+
+.popular__pizza {
+  font: 400 14px/19px var(--font-text);
+  color: #000;
+  margin: 29px 0 4px;
+}
+
+.popular__price, .price {
+  font: 600 16px/22px var(--font-text);
+  color: #000;
+}

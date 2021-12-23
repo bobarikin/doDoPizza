@@ -1,0 +1,88 @@
+/* главный файл css */
+
+/* подключение стилей */
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./slider.css");
+@import url("./popular.css");
+@import url("./grid.css");
+@import url("./footer.css");
+@import url("./pizza-modal-window.css");
+
+/* fonts */
+
+/* font-family: 'Nunito', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h2 {
+  font: 700 24px/33px var(--font-text);
+  color: #000;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+button {
+  font: 600 16px/22px var(--font-text);
+  padding: 9px 20px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button_orange button {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.button_orange button:hover {
+  background-color: #ed5d08;
+  transition: 0.3s;
+}
+
+.button_gray button {
+  color: #d15700;
+  background-color: #fff0e6;
+}
+
+.button_gray button:hover {
+  background-color: #ffd0b2;
+  transition: 0.3s;
+}
+
+#button_dynamic {
+  cursor: pointer;
+}
+
+
+/* vars */
+:root {
+  --font-text: "Nunito", sans-serif;
+  --main-color: #f96900;
+}

@@ -1,0 +1,8 @@
+.slider {
+  overflow: hidden;
+  display: flex;
+}
+
+.slider > *:hover {
+  cursor: pointer;
+}

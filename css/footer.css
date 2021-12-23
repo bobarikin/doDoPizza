@@ -1,0 +1,139 @@
+footer {
+  background-color: #464c55;
+}
+
+.footer__list_primary li ul li {
+  margin-bottom: 18px;
+  max-width: 160px;
+}
+
+.footer__list_primary li ul li a {
+  font: 400 18px/26px var(--font-text);
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.footer__list_primary li ul li a:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.footer__list_primary li ul li:first-child a {
+  font-weight: 600;
+  color: #fff;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.footer__list_primary li ul li:first-child a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.footer_top {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer_top_left {
+  max-width: 70%;
+}
+
+.footer__menu > ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 43px;
+  margin-bottom: 93px;
+}
+
+.footer__numbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__numbers > * {
+  max-width: 299px;
+}
+
+.footer__numbers > div > h2 {
+  margin-bottom: 12px;
+}
+
+.footer__numbers > div > p {
+    margin-bottom: 40px;
+  }
+
+.footer__text_bold {
+  font: 600 26px/26px var(--font-text);
+  color: #fff;
+}
+
+.footer__text_semi-op {
+  font: 400 16px/22px var(--font-text);
+  color: #fff;
+  opacity: 0.7;
+}
+
+.footer_top_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer_top_right > p {
+    font: 400 15px/20px var(--font-text);
+    color: #fff;
+    opacity: 0.5;
+}
+
+.footer_top_right > div > img {
+    display: inline-block;
+}
+
+#footer__email {
+    margin-top: 26px;
+    font: 400 15px/20px var(--font-text);
+    color: #fff;
+    opacity: 0.9;
+}
+
+.footer__phone {
+    margin: 29px 0 6px;
+}
+
+.footer__phone > a {
+    font: 600 26px/26px var(--font-text);
+    color: #fff;
+}
+
+.footer_bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 46px 0 40px;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer__links > ul {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__links > ul > li > a {
+    font: 400 16px/22px var(--font-text);
+    color: #fff;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.footer__links > ul > li > a:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
