@@ -6,3 +6,31 @@
 .slider > *:hover {
   cursor: pointer;
 }
+
+/* adaptive */
+
+@media (max-width: 1280px) {
+  .slider > div {
+    padding-top: 0;
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 577px) {
+  .container {
+    padding: 5%;
+  }
+
+  .slider > :first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .slider > div {
+    padding-top: 5%;
+  }
+}

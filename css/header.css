@@ -77,13 +77,15 @@ header {
 /* adaptive */
 
 @media (max-width: 1200px) {
+  .container {
+    padding: 5% 10%;
+  }
   .header {
-    max-width: 100%
+    max-width: 100%;
   }
 
   .header__elem {
     justify-content: space-between;
-    padding: 0 10%;
   }
 }
 
@@ -99,10 +101,13 @@ header {
   #header_sticky {
     display: none;
   }
-
 }
 
 @media (max-width: 576px) {
+  header {
+    padding: 0;
+  }
+
   .header {
     max-width: 100%;
     flex-direction: row;
@@ -114,8 +119,6 @@ header {
 
   .header__logo {
     display: flex;
-    padding-top: 12px ;
-    padding-left: 16px;
   }
 
   .header__logo > p {
@@ -130,4 +133,3 @@ header {
     display: none;
   }
 }
-
