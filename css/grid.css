@@ -34,3 +34,23 @@
     align-items: center;
     margin-right: 20px;
 }
+
+/* adaptive */
+
+@media (max-width: 1024px) {
+    .grid__container {
+        grid-template-columns: 33% 33% 33%
+    }
+}
+
+@media (max-width: 768px) {
+    .grid__container {
+        grid-template-columns: 50% 50%
+    }
+}
+
+@media (max-width: 630px) {
+    .grid__container {
+        grid-template-columns: 100%
+    }
+}

@@ -15,6 +15,10 @@ header {
   gap: 10px;
 }
 
+.adaptive__menu {
+  display: none;
+}
+
 .header__elem {
   display: flex;
   justify-content: space-between;
@@ -58,6 +62,24 @@ header {
   transition: 0.3s;
 }
 
+.adaptive__menu ul li {
+  padding: 6px 0;
+}
+
+.adaptive__menu ul li a {
+  font: 600 14px/19px var(--font-text);
+  color: #464C55;
+  background-color: #f3f3f7;
+  border-radius: 100px;
+  padding: 6px 15px;
+  white-space: nowrap;
+}
+
+.adaptive__menu ul li a:hover {
+  color: #D15700;
+  background-color: #FFF0E6;
+}
+
 #header_sticky {
   overflow: hidden;
   background-color: #fff;
@@ -87,6 +109,10 @@ header {
   .header__elem {
     justify-content: space-between;
   }
+
+  #header_sticky {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -100,6 +126,10 @@ header {
 
   #header_sticky {
     display: none;
+  }
+  .adaptive__menu {
+    display: block;
+    overflow: hidden;
   }
 }
 

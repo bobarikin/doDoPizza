@@ -7,6 +7,11 @@ openButton.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
 popUp.addEventListener("click", closeModal);
 
+document.addEventListener("keydown", (event)=> {
+  if (event.key == "Escape")
+  closeModal();
+});
+
 modalButton.forEach((element) => {
   element.addEventListener("click", openModal);
 });
